@@ -116,7 +116,7 @@
                 Stop recording.
               </button>
             </div> -->
-            <div class='video_recording_buttons_container display_none' id='video_recording_buttons'>
+            <div class='video_recording_buttons_container' id='video_recording_buttons'>
               <button id='pause_recording_button'>
                   <img src='./utils/images/pause.png'></img>
               </button>
@@ -129,9 +129,23 @@
           </div>
           </div>
         </div>
-        <div class='messenger_container'></div>    
+        <div class='messenger_container'>
+          <div class="messages_container display_none" id="messages_container">
+            <div class="new_message_container" id="new_messsage">
+              <input type="text" class="new_message_input" id="new_message_input" placeholder="Type...">
+              <button class="send_message_button" id="send_message_button">
+                <img src="./utils/images/sendMessageButton.png" class="send_message_button_image" alt="">
+              </button>
+            </div>
+          </div>
+        </div>    
         </div>
         <script src='/socket.io/socket.io.js'></script>
+        <script src='./js/constants.js' type='module'></script>
+        <script src='./js/ui.js' type='module'></script>
+        <script src='./js/wss.js' type='module'></script>
+        <script src='./js/store.js' type='module'></script>
+        <script src='./js/webRTCHandler.js' type='module'></script>
         <script src='./js/main.js' type='module'></script>
     </body>
 </html>
